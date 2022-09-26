@@ -15,24 +15,24 @@ const ItemList2 = () => {
     getProducts().then(res =>{
       setItems(res)
   })
-      .catch (err => { 
+    .catch (err => { 
         console.log('err: ' + err);
   })
   }, [])
 
   const getProducts = () =>{
-    const productsPromise = new Promise ( (resolve)=>{
+    return new Promise ( (resolve)=>{
       setTimeout( ()=> {
         resolve (products)
       }, 3000)
     })
+  }
 
-return (
-  <div>
-    <h1>Componente ItemList2</h1>
-    {items.map ( item => <ItemCards key={item.id} {...item} /> )}
-  </div>
-  )
-}
-
-export default ItemList2
+    return (
+      <div>
+        <h1>Componente ItemList2</h1>
+        { items.map( item => <ItemCards key={item.id} {...item} /> ) }
+      </div>
+    )
+  }
+  export default ItemList2
