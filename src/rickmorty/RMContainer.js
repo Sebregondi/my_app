@@ -20,7 +20,7 @@ const RMContainer = () => {
 
 // FETCH RESOLVIENDO DOS PROMESAS
  const getChars = () => {
-   const URL = 'https://rickandmortyapi.com/api/character'
+   const URL = 'https://rickandmortyapi.com/api/character?page=4'
    fetch (URL)
     .then ( res => res.json () )
     .then ( data => {
@@ -33,19 +33,20 @@ const RMContainer = () => {
 return (
     <div>
         { chars.map( c => 
-      <div key={c.id} className="card w-96 bg-base-100 shadow-xl bordered">
-        <figure><img src={c.image} alt={c.name} /></figure>
-        <div className="card-body">
-          <h2 className="card-title">{c.name}</h2>
-          <li><b>Gender:</b> {c.gender}</li>
-          <li><b>Species:</b> {c.species}</li>
-          <li><b>Status:</b> {c.status}</li>
-
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
+      <div key={c.id} className="card card-normal lg:card-side bg-base-100 shadow-x5 bordered">
+      <figure><img src={c.image} alt={c.name}/></figure>
+      <div className="card-body">
+        <h1 className="card-title">{c.name}</h1>
+        <p><b>Status:</b> {c.status}</p>
+        <p><b>Species:</b> {c.species}</p>
+        <p><b>Gender:</b> {c.gender}</p>
+        <p><b>Location:</b> {c.location.name}</p>
+        
+        <div className="card-actions justify-end">
+          <button className="btn bg-error">Listen</button>
         </div>
-      </div>)}
+      </div>
+    </div>)}
     </div>
   )
 }
