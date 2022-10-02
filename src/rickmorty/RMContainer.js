@@ -32,11 +32,26 @@ const RMContainer = () => {
 
 return (
     <div>
-        { chars.map( c => <RMCard key={c.id} {...c} />)}
+        { chars.map( c => 
+      <div key={c.id} className="card w-96 bg-base-100 shadow-xl bordered">
+        <figure><img src={c.image} alt={c.name} /></figure>
+        <div className="card-body">
+          <h2 className="card-title">{c.name}</h2>
+          <li><b>Gender:</b> {c.gender}</li>
+          <li><b>Species:</b> {c.species}</li>
+          <li><b>Status:</b> {c.status}</li>
+
+          <div className="card-actions justify-end">
+            <button className="btn btn-primary">Buy Now</button>
+          </div>
+        </div>
+      </div>)}
     </div>
   )
 }
 export default RMContainer
+
+
 
 // return (
 //     <div>

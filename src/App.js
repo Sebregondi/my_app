@@ -17,11 +17,11 @@ function App() {
   return (
     <>
     <NavBar/>
-    <ClickTracker />
-    <ItemListContainer 
-      greeting={"Mi nombre es Esteban Landucci, de la comisión 38095"}/>
-    {/* <SWCointainer/> */}
     <RMContainer/>
+    {/* <ClickTracker /> */}
+    {/* <ItemListContainer 
+      greeting={"Mi nombre es Esteban Landucci, de la comisión 38095"}/> */}
+    {/* <SWCointainer/> */}
     </>
   );
 }
