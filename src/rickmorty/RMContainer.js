@@ -33,15 +33,14 @@ const RMContainer = () => {
 return (
     <div>
         { chars.map( c => 
-      <div key={c.id} className="card card-normal lg:card-side bg-base-100 shadow-x5 bordered">
-        <figure><img src={c.image} alt={c.name}/></figure>
+      <div key={c.id} className="font-mono card card-normal lg:card-side bg-base-100 shadow-x5 mt-2">
+        <figure><img className='mask mask-decagon' src={c.image} alt={c.name}/></figure>
         <div className="card-body">
           <h1 className="card-title bg-error pl-5">{c.name}</h1>
           <p><b>Status:</b> {c.status}</p>
           <p><b>Species:</b> {c.species}</p>
           <p><b>Gender:</b> {c.gender}</p>
           <p><b>Location:</b> {c.location.name}</p>
-
         </div>
       </div>)}
     </div>
