@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ClickTracker from './components/ClickTracker';
 import SWCointainer from './API/SWCointainer';
+import RMContainer from './rickmorty/RMContainer';
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
     <ClickTracker />
     <ItemListContainer 
       greeting={"Mi nombre es Esteban Landucci, de la comisión 38095"}/>
-    <SWCointainer/>
+    {/* <SWCointainer/> */}
+    <RMContainer/>
     </>
   );
 }
