@@ -1,11 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Saludo from './Saludo';
-import ChildrenBox from './components/ChildrenBox';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ClickTracker from './components/ClickTracker';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import SWCointainer from './API/SWCointainer';
+
 
 function App() {
 
@@ -16,16 +15,11 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path={'/'} element={<ClickTracker />} />
-      </Routes>
-    </BrowserRouter>
-
-    {/* <ItemListContainer 
+    <NavBar/>
+    <ClickTracker />
+    <ItemListContainer 
       greeting={"Mi nombre es Esteban Landucci, de la comisión 38095"}/>
-     */}
+    <SWCointainer/>
     </>
   );
 }
