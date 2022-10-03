@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
 import ClickTracker from './components/ClickTracker';
 import SWContainer from './API/SWContainer';
 import RMContainer from './rickmorty/RMContainer';
